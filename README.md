@@ -1,3 +1,5 @@
+READ ME
+
 - Define a 'Increment-Decrement' component that will display a number, an "Increment" button, and a "Decrement" button next to it.
 - The start number should come from props.
 - The number should have a Number prop type and be required in the component.
