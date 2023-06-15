@@ -1,7 +1,6 @@
 import React, { Component, ReactPropTypes} from 'react'; 
-import React, { useState } from "react";
 
-class incrementDecrement extends Component {
+class IncrementDecrement extends Component {
     constructor(props) {
         super(props);
 
@@ -11,23 +10,23 @@ class incrementDecrement extends Component {
     }
 
     increment = () => {
-        this.setState({count: this.state.count +1})
+        this.setState({count: this.state.count + 1})
     }
     decrement = () => {
-        this.setState({count: this.state.count -1})
+        this.setState({count: `${this.state.count=="0"?alert("Cannot be less than 0"):this.state.count - 1}`})
     }
 
     render() {
         return (
-            <div class="container">
-                <button onClick="increment()">Increment</button>
-                <h1>{this.state.number}</h1>
-                <button onClick="decrement()">Decrement</button>
+            <div className="container">
+                <button onClick={this.increment}>Increment</button>
+                <h1>{this.state.count}</h1>
+                <button onClick={this.decrement}>Decrement</button> 
             </div>
-        )
+        );
     }
-   
+  
 }
 
 
-export default incrementDecrement;
+export default IncrementDecrement;
