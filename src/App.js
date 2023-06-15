@@ -1,9 +1,9 @@
-import incrementDecrement from './increment-decrement/src/IncrementDecrement/increcemntDecrement.jsx';
+import incrementDecrement from './IncrementDecrement/incrementDecrement';
 import './App.css';
 
 function App() {
   return (
-    <h1>Hi</h1>
+    <incrementDecrement number="13"/>
   );
 }
 
