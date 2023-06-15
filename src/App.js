@@ -1,9 +1,12 @@
-import incrementDecrement from './IncrementDecrement/incrementDecrement';
+// import React from 'react';
+import IncrementDecrement from './IncrementDecrement/incrementDecrement.jsx';
 import './App.css';
 
 function App() {
   return (
-    <incrementDecrement number="13"/>
+    <div>
+      <IncrementDecrement/>
+    </div>
   );
 }
 
