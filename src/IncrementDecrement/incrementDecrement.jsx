@@ -13,7 +13,11 @@ class IncrementDecrement extends Component {
         this.setState({count: this.state.count + 1})
     }
     decrement = () => {
-        this.setState({count: `${this.state.count=="0"?alert("Cannot be less than 0"):this.state.count - 1}`})
+        if (this.state.count !== 0) {
+            this.setState({count: this.state.count-1});
+        } else {
+            alert("Cannot be less than 0");
+        }
     }
 
     render() {
