@@ -1,24 +1,32 @@
 import React, { Component, ReactPropTypes} from 'react'; 
+import React, { useState } from "react";
 
 class incrementDecrement extends Component {
     constructor(props) {
-        super(props); 
+        super(props);
+
+        this.state = {
+            count: 0
+        };
     }
+
+    increment = () => {
+        this.setState({count: this.state.count +1})
+    }
+    decrement = () => {
+        this.setState({count: this.state.count -1})
+    }
+
     render() {
         return (
             <div class="container">
-                <button>Increment</button>
-                <h1>{this.props.number}</h1>
-                <button>Decrement</button>
+                <button onClick="increment()">Increment</button>
+                <h1>{this.state.number}</h1>
+                <button onClick="decrement()">Decrement</button>
             </div>
         )
     }
-    increment() {
-        this.props.number += 1;
-    }
-    decrement() {
-        this.props.number -= 1;
-    }
+   
 }
 
 
